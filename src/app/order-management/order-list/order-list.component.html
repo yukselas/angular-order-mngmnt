@@ -1,0 +1,34 @@
+<table class="table">
+    <thead>
+      <tr>
+          <th scope="col">Actions</th>
+        <th scope="col">Customer Order No</th>
+        <th scope="col">Departure Address</th>
+        <th scope="col">Destination Address</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">QuantityUnit</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Weight Unit</th>
+        <th scope="col">Material Code</th>
+        <th scope="col">Note</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderList">
+          <td>
+              <button class="btn btn-warning" (click)="editOrder(order)">Edit</button>
+          </td>
+        <td>{{order.customerOrderNo}}</td>
+        <td>{{order.departureAddress}}</td>
+        <td>{{order.destinationAddress}}</td>
+        <td>{{order.quantity}}</td>
+        <td>{{order.quantityUnit}}</td>
+        <td>{{order.weight}}</td>
+        <td>{{order.weightUnit}}</td>
+        <td>{{order.materialCode}}</td>
+        <td>{{order.note}}</td>
+        <td>{{order.status}}</td>
+      </tr>
+    </tbody>
+  </table>

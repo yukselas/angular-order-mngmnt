@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Edit Order</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-6">
+            <b>Customer Order No</b>
+        </div>
+        <div class="col-6">{{order.customerOrderNo}}</div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <b>Status</b>
+        </div>
+        <div class="col-6">
+            <select [(ngModel)]="order.status">
+                <option *ngFor="let status of statuses" [ngValue]="status">{{status}}</option>
+              </select>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="edit()">Save</button>
+</div>
